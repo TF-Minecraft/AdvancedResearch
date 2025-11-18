@@ -53,9 +53,14 @@ public class ResearchMain extends JavaPlugin{
 	}
 	@Override
 	public void onDisable() {
-		for(RPlayer p : Database.loadedPlayers) {
-			db.savePlayer(p);
+		if (Database.loadedPlayers != null) {
+			for (RPlayer p : Database.loadedPlayers) {
+				db.savePlayer(p);
+			}
+		} else {
+			getLogger().warning("Database.loadedPlayers was null during onDisable, skipping save.");
 		}
 		db.saveStations();
 	}
+
 }

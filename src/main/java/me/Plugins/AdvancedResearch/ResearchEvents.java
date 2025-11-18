@@ -28,7 +28,7 @@ import net.Indyuce.mmoitems.MMOItems;
 import net.Indyuce.mmoitems.manager.ItemManager;
 
 public class ResearchEvents implements Listener{
-	public static List<RStation> stations = new ArrayList<RStation>();
+	public static List<RStation> stations = new ArrayList<>();
 	public static HashMap<Player, Location> currentLoc = new HashMap<Player, Location>();
 	public InventoryManager inv = new InventoryManager();
 	@EventHandler
