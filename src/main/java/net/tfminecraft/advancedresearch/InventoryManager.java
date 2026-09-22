@@ -1,5 +1,7 @@
 package net.tfminecraft.advancedresearch;
 
+import net.tfminecraft.advancedresearch.util.LegacyModelData;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -28,7 +30,7 @@ public class InventoryManager {
 				if(re.getId().equalsIgnoreCase(e.split("\\.")[0])) {
 					ItemStack eItem = new ItemStack(re.getMaterial(), 1);
 					ItemMeta m = eItem.getItemMeta();
-					m.setCustomModelData(re.getModelData());
+					LegacyModelData.set(m, re.getModelData());
 					m.setDisplayName(re.getName());
 					List<String> lore = new ArrayList<String>();
 					for(String ce : rs.getCurrentElements()) {
@@ -148,7 +150,7 @@ public class InventoryManager {
 				if(re.getId().equalsIgnoreCase(e.split("\\.")[0])) {
 					ItemStack eItem = new ItemStack(re.getMaterial(), 1);
 					ItemMeta m = eItem.getItemMeta();
-					m.setCustomModelData(re.getModelData());
+					LegacyModelData.set(m, re.getModelData());
 					m.setDisplayName(re.getName());
 					List<String> lore = new ArrayList<String>();
 					for(String ce : rs.getCurrentElements()) {
@@ -201,8 +203,7 @@ public class InventoryManager {
 	}
 	@SuppressWarnings("deprecation")
 	public ItemStack getMMOItem(String path) {
-		ItemManager itemManager = MMOItems.plugin.getItems();
-		ItemStack item =  itemManager.getMMOItem(MMOItems.plugin.getTypes().get(path.split("\\.")[1].toUpperCase()), path.split("\\.")[2].toUpperCase()).newBuilder().build(); //m.material.salt
+		ItemStack item =  MMOItems.plugin.getMMOItem(MMOItems.plugin.getTypes().get(path.split("\\.")[1].toUpperCase()), path.split("\\.")[2].toUpperCase()).newBuilder().build(); //m.material.salt
 		return item;
 	}
 	
@@ -230,7 +231,7 @@ public class InventoryManager {
 				if(re.getId().equalsIgnoreCase(e.split("\\.")[0])) {
 					ItemStack eItem = new ItemStack(re.getMaterial(), 1);
 					ItemMeta m = eItem.getItemMeta();
-					m.setCustomModelData(re.getModelData());
+					LegacyModelData.set(m, re.getModelData());
 					m.setDisplayName(re.getName());
 					List<String> lore = new ArrayList<String>();
 					for(String ce : rs.getCurrentElements()) {
