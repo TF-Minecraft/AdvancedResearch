@@ -188,8 +188,7 @@ public class ResearchEvents implements Listener{
 		}
 		String type = rs.getResult().split("\\.")[0]; //v.emerald
 		if(type.equalsIgnoreCase("m")) {
-			ItemManager itemManager = MMOItems.plugin.getItems();
-			ItemStack item =  itemManager.getMMOItem(MMOItems.plugin.getTypes().get(rs.getResult().split("\\.")[1].toUpperCase()), rs.getResult().split("\\.")[2].toUpperCase()).newBuilder().build(); //m.material.salt
+			ItemStack item =  MMOItems.plugin.getMMOItem(MMOItems.plugin.getTypes().get(rs.getResult().split("\\.")[1].toUpperCase()), rs.getResult().split("\\.")[2].toUpperCase()).newBuilder().build(); //m.material.salt
 			p.getInventory().addItem(item);
 		} else {
 			CustomStack stack = CustomStack.getInstance(rs.getResult().split("\\.")[1]);
