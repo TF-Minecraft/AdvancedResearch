@@ -1,7 +1,7 @@
 main: me.Plugins.AdvancedResearch.ResearchMain
 api-version: 1.19
 name: AdvancedResearch
-version: 1.0
+version: ${project.version}
 author: Drefvelin
 
 depend: [MMOItems, MythicLib, ItemsAdder]
