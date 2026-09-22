@@ -63,6 +63,8 @@ public class ResearchEvents implements Listener{
 			rp.setMentalPoints(amount);
 		}
 	}
+	// Keep the existing legacy text representation, formatting, and exact-string comparisons.
+	@SuppressWarnings("deprecation")
 	@EventHandler
 	public void startResearchEvent(PlayerInteractEvent e) {
 		if(!e.getAction().equals(Action.RIGHT_CLICK_BLOCK)) return;
@@ -102,6 +104,8 @@ public class ResearchEvents implements Listener{
 			}
 		}
 	}
+	// Keep the existing legacy text representation, formatting, and exact-string comparisons.
+	@SuppressWarnings("deprecation")
 	@EventHandler
 	public void scrapEvent(InventoryClickEvent e) {
 		if(!(e.getWhoClicked() instanceof Player)) return;
@@ -129,6 +133,8 @@ public class ResearchEvents implements Listener{
 			inv.MenuInventory(p, rs);
 		}
 	}
+	// Keep the existing legacy text representation, formatting, and exact-string comparisons.
+	@SuppressWarnings("deprecation")
 	@EventHandler
 	public void onResearchEvent(InventoryClickEvent e) {
 		if(!(e.getWhoClicked() instanceof Player)) return;
@@ -180,6 +186,8 @@ public class ResearchEvents implements Listener{
 			doResearch(i, rp, rs, rs.getBottomNote());
 		}
 	}
+	// Keep the existing legacy text representation, formatting, and exact-string comparisons.
+	@SuppressWarnings("deprecation")
 	private void giveResult(Player p, RStation rs) {
 		if(p.getInventory().firstEmpty() == -1) {
 			p.sendMessage(ChatColor.RED + "You need at least 1 empty slot in you inventory!");	

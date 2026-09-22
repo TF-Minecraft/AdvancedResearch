@@ -21,6 +21,8 @@ import net.Indyuce.mmoitems.manager.ItemManager;
 
 public class InventoryManager {
 	public List<Integer> elementSlots = Arrays.asList(10, 19, 28, 37);
+	// Keep the existing legacy text representation, formatting, and exact-string comparisons.
+	@SuppressWarnings("deprecation")
 	public void MenuInventory(Player player, RStation rs) {
 		Inventory i = ResearchMain.plugin.getServer().createInventory(null, 54, ChatColor.GRAY + "Research Station");
 		Integer counter = 0;
@@ -117,6 +119,8 @@ public class InventoryManager {
 			return;
 		}
 	}
+	// Keep the existing legacy text representation, formatting, and exact-string comparisons.
+	@SuppressWarnings("deprecation")
 	public void confirmInventory(Player player, RStation rs) {
 		Inventory i = ResearchMain.plugin.getServer().createInventory(null, 9, ChatColor.GRAY + "Confirm Scrap");
 		ItemStack yesItem = new ItemStack(Material.GREEN_CONCRETE, 1);
@@ -142,6 +146,8 @@ public class InventoryManager {
 		}
 		player.openInventory(i);
 	}
+	// Keep the existing legacy text representation, formatting, and exact-string comparisons.
+	@SuppressWarnings("deprecation")
 	public void UpdateInventory(Inventory i, Player p, RStation rs) {
 		Integer counter = 0;
 		Collections.sort(rs.getNeededElements());
@@ -182,6 +188,8 @@ public class InventoryManager {
 		p.updateInventory();
 	}
 	
+	// Keep the existing legacy text representation, formatting, and exact-string comparisons.
+	@SuppressWarnings("deprecation")
 	public ItemStack getItemsAdderFiller(String path) {
 		CustomStack stack = CustomStack.getInstance(path);
 		if(stack != null) {
@@ -207,6 +215,8 @@ public class InventoryManager {
 		return item;
 	}
 	
+	// Keep the existing legacy text representation, formatting, and exact-string comparisons.
+	@SuppressWarnings("deprecation")
 	public ItemStack getResearchNote(ResearchNote n) {
 		ItemStack i = new ItemStack(Material.PAPER, 1);
 		ItemMeta m = i.getItemMeta();
@@ -223,6 +233,8 @@ public class InventoryManager {
 		i.setItemMeta(m);
 		return i;
 	}
+	// Keep the existing legacy text representation, formatting, and exact-string comparisons.
+	@SuppressWarnings("deprecation")
 	public void completeResearch(Inventory i, Player p, RStation rs, Boolean open) {
 		Integer counter = 0;
 		Collections.sort(rs.getNeededElements());
