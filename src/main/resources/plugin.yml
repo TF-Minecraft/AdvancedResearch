@@ -1,4 +1,4 @@
-main: me.Plugins.AdvancedResearch.ResearchMain
+main: net.tfminecraft.advancedresearch.ResearchMain
 api-version: '1.21.10'
 name: AdvancedResearch
 version: ${project.version}

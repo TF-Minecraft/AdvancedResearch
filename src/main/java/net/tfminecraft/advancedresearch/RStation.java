@@ -1,4 +1,4 @@
-package me.Plugins.AdvancedResearch;
+package net.tfminecraft.advancedresearch;
 
 import java.util.ArrayList;
 import java.util.List;

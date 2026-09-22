@@ -1,4 +1,4 @@
-package me.Plugins.AdvancedResearch;
+package net.tfminecraft.advancedresearch;
 
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
