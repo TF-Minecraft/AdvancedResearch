@@ -1,4 +1,4 @@
-package me.Plugins.AdvancedResearch;
+package net.tfminecraft.advancedresearch;
 
 import java.io.File;
 import java.io.FileInputStream;
